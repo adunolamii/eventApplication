@@ -9,10 +9,11 @@ import { CiSquarePlus } from "react-icons/ci";
 import { useEffect } from "react";
 import axios from "axios";
 
-
 function Navbar() {
   const [form, setForm] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [formAll, setFormAll] = useState([]);
+  // const [loadAll, setLoadAll] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -26,9 +27,22 @@ function Navbar() {
         setError(err);
         setLoading(false);
       });
+
+    const fetchAll = async () => {
+      try {
+        const res = await axios.get("http://localhost:5001/events");
+        setFormAll(res.data);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+    fetchAll();
   }, []);
+
   return (
     <>
+    <div className="w-full">
       <div className="bg-black fixed w-full bottom-0">
         <div className="text-2xl text-white flex flex-row justify-around cursor-pointer">
           <div className="items-center py-2">
@@ -68,43 +82,45 @@ function Navbar() {
       </div>
       <p className="text-xl font-bold mt-10 ml-2 mr-52 ">Happening Now!!!</p>
 
-    <div>
-        {form.map((form) =>  (
-            <div key={form._id}>
-                <img src={form.picture} alt="" className=" w-full h-40 rounded-2xl "/>
-                
-                <div className="flex justify-between">
-                       <div className=" flex justify-between">
-                       <IoLocationSharp className=" text-red-600 mt-1" />
-                       <p>{form.eventName}</p>
-                       </div>
-                 <h1>{form.amount}</h1>
-                </div>
-         <div className="flex justify-between">
-          <p>{form.location}</p>
-          <h1>{form.time}</h1>
-   </div>  
-   <div className="flex justify-between">
-   <h6 className="font-bold text-xl">Upcoming Event</h6>
-   <button>See all</button>
-   <CiSquarePlus/>
-   </div>
-     
-               
+      <div>
+        {form.map((form) => (
+          <div key={form._id}>
+            <img
+              src={form.picture}
+              alt=""
+              className=" w-full h-40 rounded-2xl "
+            />
 
-
-
-         
-     </div>
+            <div className="flex justify-between">
+              <div className=" flex justify-between">
+                <IoLocationSharp className=" text-red-600 mt-1" />
+                <p>{form.eventName}</p>
+              </div>
+              <h1>{form.amount}</h1>
+            </div>
+            <div className="flex justify-between">
+              <p>{form.location}</p>
+              <h1>{form.time}</h1>
+            </div>
+            <div className="flex justify-between">
+              <h6 className="font-bold text-xl">Upcoming Event</h6>
+              <div>
+                <button className="flex justify-between">
+                  See all <CiSquarePlus className=" mt-1 w-6" />
+                </button>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
-       
-        
-
-      
-
-     
-     
+      <div className="flex flex-wrap gap-4 overflow-x-scroll">
+        {formAll.map((formAll) => (
+          <div key={formAll._id} className="w-32 h-36 ">
+            <img src={formAll.picture} className="rounded-lg " />
+          </div>
+        ))}
+      </div>
+      </div>
     </>
   );
 }

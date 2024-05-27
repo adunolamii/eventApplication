@@ -27,7 +27,7 @@ app.post("/events", async(req, res)=>{
     }
 })
 
-// READ
+// READ ALL
 app.get("/events", async(req, res)=>{
     try {
        const event = await eventModel.find(req.body)
