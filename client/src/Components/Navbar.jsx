@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { GoHomeFill } from "react-icons/go";
 import { BsCalendar2EventFill } from "react-icons/bs";
 import { FaUserAlt } from "react-icons/fa";
-import { LuNetwork } from "react-icons/lu";
+// import { LuNetwork } from "react-icons/lu";
+import { IoIosContact } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
 import { CiSquarePlus } from "react-icons/ci";
 import { useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [form, setForm] = useState([]);
@@ -51,15 +53,15 @@ function Navbar() {
           </div>
           <div className="items-center py-2">
             <BsCalendar2EventFill className="absolute ml-5" />
-            <h6 className="relative mt-3">Events</h6>
+            <Link to="event" className='relative mt-3'><a>Event</a></Link>
           </div>
           <div className="items-center py-2">
             <FaUserAlt className="absolute ml-5" />
-            <p className="relative mt-3">Service</p>
+            <Link to="service" className='relative mt-3'><a>Service</a></Link>
           </div>
           <div className="items-center py-2">
-            <LuNetwork className="absolute ml-5" />
-            <p className="relative mt-3">Profile</p>
+            <IoIosContact className="absolute ml-5" />
+            <Link to="profile" className='relative mt-3'><a>Profile</a></Link>
           </div>
         </div>
       </div>
