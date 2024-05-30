@@ -1,12 +1,8 @@
-import {React} from 'react'
-import { useState } from 'react'
+import React from 'react'
+import { useState } from 'react';
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 
-
-
-
-  const Admin = () => {
+function Admin2() {
 
   const [formData, setFormData] = useState({
     location: "",
@@ -41,22 +37,17 @@ const handleChange = (e) => {
     });
        
         try {
-            await axios.post("http://localhost:5001/events", formData)
+            await axios.post("http://localhost:5001/admin2s", formData)
         } catch (error) {
             console.log("error message")
         }
     }
 
- 
-   
-
   return (
-    <div className=" h-screen flex flex-col p-4">
-      <Link to={"Admin2"} ><button className='bg-blue-400'>Admin2</button></Link>
-{/* <button className='bg-blue-400'>Admin2</button> */}
+    <div className=" h-screen flex flex-col p-4">admin2
 
 
-        <form className="flex flex-col gap-7 mt-6" onSubmit={handleSubmit}>
+      <form className="flex flex-col gap-7 mt-6" onSubmit={handleSubmit}>
         <input
             name="location"
             value={formData.location}
@@ -138,4 +129,4 @@ const handleChange = (e) => {
   )
 }
 
-export default Admin
+export default Admin2

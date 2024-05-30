@@ -1,13 +1,8 @@
-import {React} from 'react'
-import { useState } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import axios from 'axios';
 
 
-
-
-  const Admin = () => {
-
+function AdminEvent() {
   const [formData, setFormData] = useState({
     location: "",
     eventName: "",
@@ -41,22 +36,14 @@ const handleChange = (e) => {
     });
        
         try {
-            await axios.post("http://localhost:5001/events", formData)
+            await axios.post("http://localhost:5001/adminevents", formData)
         } catch (error) {
             console.log("error message")
         }
     }
-
- 
-   
-
   return (
-    <div className=" h-screen flex flex-col p-4">
-      <Link to={"Admin2"} ><button className='bg-blue-400'>Admin2</button></Link>
-{/* <button className='bg-blue-400'>Admin2</button> */}
-
-
-        <form className="flex flex-col gap-7 mt-6" onSubmit={handleSubmit}>
+    <div>
+      <form className="flex flex-col gap-7 mt-6" onSubmit={handleSubmit}>
         <input
             name="location"
             value={formData.location}
@@ -97,30 +84,7 @@ const handleChange = (e) => {
             placeholder="date"
             onChange={handleChange}
           />
-              <input
-            name="descriptionForRegular"
-            value={formData.descriptionForRegular}
-            className="pl-10  border-4 border-blue-200 w-full rounded-md p-2 text-xl font-bold"
-            type="text"
-            placeholder="descriptionForRegular"
-            onChange={handleChange}
-          />
-              <input
-            name="descriptionForVip"
-            value={formData.descriptionForVip}
-            className="pl-10  border-4 border-blue-200 w-full rounded-md p-2 text-xl font-bold"
-            type="text"
-            placeholder="descriptionForVip"
-            onChange={handleChange}
-          />
-              <input
-            name="descriptionForTableForFive"
-            value={formData.descriptionForTableForFive}
-            className="pl-10  border-4 border-blue-200 w-full rounded-md p-2 text-xl font-bold"
-            type="text"
-            placeholder="descriptionForTableForFive"
-            onChange={handleChange}
-          />
+       
               <input
             name="picture"
             value={formData.picture}
@@ -138,4 +102,4 @@ const handleChange = (e) => {
   )
 }
 
-export default Admin
+export default AdminEvent;

@@ -11,6 +11,9 @@ import Navbar from './Components/Navbar';
 import Event from './Components/Pages/Event';
 import Service from './Components/Pages/Service';
 import Profile from './Components/Pages/Profile';
+import Admin2 from './Admin/Admin2';
+import AdminEvent from './Admin/AdminEvent';
+
 
 function App() {
    return (
@@ -24,6 +27,8 @@ function App() {
                   <Route path="/gatherEM" element={<GatherEM/>}/>
                   <Route path="/gatherNP" element={<GatherNP/>}/>
                   <Route path="/admin" element={<Admin/>}/>
+                  <Route path="/admin2" element={<Admin2/>}/>
+                  <Route path="/adminEvent" element={<AdminEvent/>}/>
                   <Route path="/event" element={<Event/>}/>
                   <Route path="/service" element={<Service/>}/>
                   <Route path="/profile" element={<Profile/>}/>
