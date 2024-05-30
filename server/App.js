@@ -81,7 +81,7 @@ app.post("/adminEvents", async(req, res)=>{
 app.get("/adminEvents", async(req, res)=>{
   try {
      const adminEvent = await adminEventModel.find(req.body)
-     res.status(200).json(admin2)
+     res.status(200).json(adminEvent)
   } catch (error) {
       res.status(500).json({error})
   }
