@@ -13,6 +13,8 @@ import Service from './Components/Pages/Service';
 import Profile from './Components/Pages/Profile';
 import Admin2 from './Admin/Admin2';
 import AdminEvent from './Admin/AdminEvent';
+import AdminServices from './Admin/AdminServices';
+
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
                   <Route path="/admin" element={<Admin/>}/>
                   <Route path="/admin2" element={<Admin2/>}/>
                   <Route path="/adminEvent" element={<AdminEvent/>}/>
+                  <Route path="/adminServices" element={<AdminServices/>}/>
                   <Route path="/event" element={<Event/>}/>
                   <Route path="/service" element={<Service/>}/>
                   <Route path="/profile" element={<Profile/>}/>

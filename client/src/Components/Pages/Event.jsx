@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+
+import { useState } from "react";
 import { IoLocationSharp } from "react-icons/io5";
-import { useState } from 'react';
 import axios from 'axios';
+import { useEffect } from "react";
 
 function Event() {
   const [form, setForm] = useState([]);
@@ -9,16 +10,6 @@ function Event() {
   const [event, setEvent] = useState([])
 
   useEffect(() => {
-    // axios
-    //   .get("http://localhost:5001/adminEvents")
-    //   .then((res) => {
-    //     setEvent([res.data]);
-    //     setLoading(false);
-    //   })
-    //   .catch((err) => {
-    //     setError(err);
-    //     setLoading(false);
-    //   });
   
     const eventAll = async () => {
       try {
