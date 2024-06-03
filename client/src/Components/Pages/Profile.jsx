@@ -12,17 +12,15 @@ function Profile() {
       <div className=' w-full h-80 bg-slate-100 mt-8 rounded-2xl'>
       <p className=' font-bold text-xl mr-60'>Acount Overview</p>
 
-<div className=' flex flex-col'>
+<div className='flex flex-col'>
       <div className=' bg-orange-200 w-10 h-10 rounded-xl absolute mt-10 cursor-pointer flex'>
-      <RiLockPasswordLine className=' m-auto mt-3 text-red-500' />
-      </div>
-     <div className=' '>
-        <p className='relative mr-52 mt-12'>Change Password  </p> 
-        </div> 
+      <RiLockPasswordLine className=' m-auto mt-3 text-red-500' />         </div>
       
+      <p className='relative mr-52 mt-12'>Change Password  </p> 
      
-     
+      
       </div>
+      
       </div>
         
      

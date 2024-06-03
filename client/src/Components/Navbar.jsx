@@ -57,27 +57,34 @@ function Navbar() {
     <div className="w-full">
       <div className="bg-black fixed w-full bottom-0 ">
         <div className="text-2xl text-white flex flex-row justify-around cursor-pointer">
+       
+        <Link to="/" className=' text-xs'>
         <div>
             <GoHomeFill className=" ml-2 mt-2  text-xl"/>
-            <Link to="event" className=' text-xs'><a>Home </a></Link>
-            
+            <a>Home </a>
           </div>
+          </Link> 
+          
+          <Link to="/event" className=' text-xs'>
           <div>
             <BsCalendar2EventFill className=" ml-2 mt-2  text-xl"/>
-            <Link to="event" className=' text-xs'><a>Event </a></Link>
-            
+            <a>Event </a>
           </div>
+          </Link>
 
+          <Link to="/service" className=' text-xs'>
           <div>
             <IoIosContact className=" ml-2 mt-2  text-xl"/>
-            <Link to="service" className=' text-xs'><a>Services </a></Link>
-            
+            <a>Services </a>
           </div>
+          </Link>
+
+          <Link to="/profile" className=' text-xs'>
           <div>
             <FaUserAlt className=" ml-2 mt-2  text-xl"/>
-            <Link to="service" className=' text-xs'><a>Profile </a></Link>
-            
+            <a>Profile </a>
           </div>
+          </Link>
       
       
         </div>

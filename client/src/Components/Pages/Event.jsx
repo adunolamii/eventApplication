@@ -47,17 +47,25 @@ function Event() {
       {
        event.map((event) => (
         <div key={event._id} className=" h-36 w-44">
-          <img src={event.picture} className="rounded-lg w-full mt-24" />
+          <img src={event.picture} className="rounded-lg mt-24 w-full" />
+
           <div className='flex justify-between'>
             <p className='font-bold'>{event.eventName}</p>
             <p className=' ml-10 font-bold'>{event.amount}</p>
           </div>
-          <div className='flex'>
+         
+          <div className='flex justify-between'>
           <div className=" flex justify-center">
             <IoLocationSharp className=" text-red-600 mt-1 " />
             <p className=" mb-2">{event.location}</p>
             </div >
-            <p className=' ml-10 font-bold'>{event.date}</p>
+            <p className=' ml-4 font-bold'>{event.date}</p>
+          </div>
+
+          
+          <div className='flex justify-between'>
+            <p className='font-bold'>{event.eventName}</p>
+            <p className=' ml-10 font-bold'>{event.time}</p>
           </div>
           
         </div> 
