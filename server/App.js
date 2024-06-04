@@ -4,6 +4,7 @@ const eventModel = require("./Models/eventModel");
 const admin2Model = require("./Models/admin2Model");
 const adminEventModel = require("./Models/adminEventModel");
 const adminUpcomingModel = require("./Models/adminUpcomingModel");
+const adminDiscoverModel = require("./Models/adminDiscoverModel");
 const dotenv = require("dotenv").config();
 const cors = require('cors')
 
@@ -102,6 +103,25 @@ app.get("/adminUpcomings", async(req, res)=>{
   try {
      const adminUpcoming = await adminUpcomingModel.find(req.body)
      res.status(200).json(adminUpcoming)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+
+// CREATE DISCOVERROUTES  
+app.post("/adminDiscovers", async(req, res)=>{
+  try {
+     const adminDiscover = await adminDiscoverModel.create(req.body)
+     res.status(200).json(adminDiscover)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ DISCOVERS
+app.get("/adminDiscovers", async(req, res)=>{
+  try {
+     const adminDiscover = await adminDiscoverModel.find(req.body)
+     res.status(200).json(adminDiscover)
   } catch (error) {
       res.status(500).json({error})
   }

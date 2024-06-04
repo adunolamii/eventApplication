@@ -16,6 +16,8 @@ import AdminEvent from './Admin/AdminEvent';
 import AdminServices from './Admin/AdminServices';
 import AdminUpcoming from './Admin/AdminUpcoming';
 import UpcomingRoutes from './Components/UpcomingRoutes';
+import AdminDiscover from './Admin/AdminDiscover';
+import DiscoverRoutes from './Components/Pages/DiscoverRoutes';
 
 
 
@@ -40,6 +42,11 @@ function App() {
 
                   <Route path="/adminUpcoming" element={<AdminUpcoming/>}/>   
                   <Route path="/upcomingRoutes" element={<UpcomingRoutes/>}/>
+
+                  <Route path="/admindiscover" element={<AdminDiscover/>}/>   
+                  <Route path="/discoverRoutes" element={<DiscoverRoutes/>}/>
+
+
 
                   <Route path="/signUp" element={<SignUp/>}/>
                   <Route path="/signIn" element={<SignIn/>}/>
