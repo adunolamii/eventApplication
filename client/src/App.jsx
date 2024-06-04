@@ -14,6 +14,8 @@ import Profile from './Components/Pages/Profile';
 import Admin2 from './Admin/Admin2';
 import AdminEvent from './Admin/AdminEvent';
 import AdminServices from './Admin/AdminServices';
+import AdminUpcoming from './Admin/AdminUpcoming';
+import UpcomingRoutes from './Components/UpcomingRoutes';
 
 
 
@@ -36,6 +38,8 @@ function App() {
                   <Route path="/service" element={<Service/>}/>
                   <Route path="/profile" element={<Profile/>}/>
 
+                  <Route path="/adminUpcoming" element={<AdminUpcoming/>}/>   
+                  <Route path="/upcomingRoutes" element={<UpcomingRoutes/>}/>
 
                   <Route path="/signUp" element={<SignUp/>}/>
                   <Route path="/signIn" element={<SignIn/>}/>

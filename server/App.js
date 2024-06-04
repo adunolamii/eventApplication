@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const eventModel = require("./Models/eventModel");
 const admin2Model = require("./Models/admin2Model");
 const adminEventModel = require("./Models/adminEventModel");
-const  adminServicesModel = require("./Models/adminServicesModel");
+const adminUpcomingModel = require("./Models/adminUpcomingModel");
 const dotenv = require("dotenv").config();
 const cors = require('cors')
 
@@ -78,7 +78,7 @@ app.post("/adminEvents", async(req, res)=>{
       res.status(500).json({error})
   }
 })
-// READ ADMINEVENT
+// GET ADMINEVENT
 app.get("/adminEvents", async(req, res)=>{
   try {
      const adminEvent = await adminEventModel.find(req.body)
@@ -88,20 +88,20 @@ app.get("/adminEvents", async(req, res)=>{
   }
 })
 
-// CREATE ADMINSERVICES  
-app.post("/adminServices", async(req, res)=>{
+// CREATE UPCOMINGROUTES  
+app.post("/adminUpcomings", async(req, res)=>{
   try {
-     const adminServices = await adminServicesModel.create(req.body)
-     res.status(200).json(adminServices)
+     const adminUpcoming = await adminUpcomingModel.create(req.body)
+     res.status(200).json(adminUpcoming)
   } catch (error) {
       res.status(500).json({error})
   }
 })
-// READ ADMINSERVICES
-app.get("/adminServices", async(req, res)=>{
+// READ UPCOMINGROUTES
+app.get("/adminUpcomings", async(req, res)=>{
   try {
-     const adminServices = await adminServicesModel.find(req.body)
-     res.status(200).json(adminServices)
+     const adminUpcoming = await adminUpcomingModel.find(req.body)
+     res.status(200).json(adminUpcoming)
   } catch (error) {
       res.status(500).json({error})
   }

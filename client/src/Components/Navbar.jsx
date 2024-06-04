@@ -166,7 +166,7 @@ function Navbar() {
       </div> 
       <div>
       <div className="flex justify-between">
-              <h6 className="font-bold text-xl">Upcoming Events</h6>
+              <h6 className="font-bold text-xl">Discover Venues</h6>
               <div>
                 <button className="flex justify-between">
                   See all <CiSquarePlus className=" mt-1 w-6" />
