@@ -17,9 +17,9 @@ import image5 from "../Pages/images/Rectangle 9 (5).svg"
 const Service = () => {
   return (
     <div className="w-full">
-      <div className="h-15 items-center  flex flex-row p-2">
-        <IoLocationSharp className=" text-red-600 items-center mt-" />
-        <p className="text-xl font-bold items-center px-3">
+      <div className="h-15 items-center  flex flex-row">
+        <IoLocationSharp className=" text-red-600 items-center" />
+        <p className="text-xl font-bold items-center">
           No 6, Trench Avenue Pluto.
         </p>
       </div>
@@ -44,7 +44,7 @@ const Service = () => {
      
      
       <div className="w-full">
-      <div className="bg-black fixed w-full bottom-0 ">
+      <div className="bg-black fixed w-full bottom-0 right-0">
         <div className="text-2xl text-white flex flex-row justify-around cursor-pointer">
         <div>
             <GoHomeFill className=" ml-2 mt-2  text-xl"/>

@@ -54,8 +54,9 @@ function Navbar() {
 
   return (
     <>
-    <div className="w-full">
-      <div className="bg-black fixed w-full bottom-0 ">
+
+     <div className="w-full"> 
+      <div className="bg-black fixed w-full bottom-0 right-0 ">
         <div className="text-2xl text-white flex flex-row justify-around cursor-pointer">
        
         <Link to="/" className=' text-xs'>
@@ -88,14 +89,14 @@ function Navbar() {
       
       
         </div>
-      </div>
+      </div> 
 
 
 
 
-      <div className="h-15 items-center  flex flex-row p-2">
-        <IoLocationSharp className=" text-red-600 items-center mt-" />
-        <p className="text-xl font-bold items-center px-3">
+      <div className=" px-0 h-15 items-center  flex flex-row p-2 ">
+        <IoLocationSharp className=" text-red-600 " />
+        <p className="text-xl font-bold">
           No 6, Trench Avenue Pluto.
         </p>
       </div>
@@ -110,7 +111,7 @@ function Navbar() {
           />
         </div>
       </div>
-      <p className="text-xl font-bold mt-10 ml-2 mr-52 ">Happening Now!!!</p>
+      <p className="text-xl font-bold mt-10 ml-4 mr-52 ">Happening Now!!!</p>
 
       <div>
         {/* {/* {form.map((form) => (
@@ -187,7 +188,9 @@ function Navbar() {
         ))}
       </div>
       </div>
+     
       </div>
+     
     </>
   );
 }

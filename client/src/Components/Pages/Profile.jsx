@@ -1,6 +1,11 @@
 import React from 'react'
 import { RiLockPasswordLine } from "react-icons/ri";
 import { FaGreaterThan } from "react-icons/fa6";
+import { GoHomeFill } from "react-icons/go";
+import { BsCalendar2EventFill } from "react-icons/bs";
+import { FaUserAlt } from "react-icons/fa";
+import { IoIosContact } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function Profile() {
   return (
@@ -22,6 +27,43 @@ function Profile() {
       </div>
       
       </div>
+      <div className="w-full"> 
+      <div className="bg-black fixed w-full bottom-0 right-0 ">
+        <div className="text-2xl text-white flex flex-row justify-around cursor-pointer">
+       
+        <Link to="/" className=' text-xs'>
+        <div>
+            <GoHomeFill className=" ml-2 mt-2  text-xl"/>
+            <a>Home </a>
+          </div>
+          </Link> 
+          
+          <Link to="/event" className=' text-xs'>
+          <div>
+            <BsCalendar2EventFill className=" ml-2 mt-2  text-xl"/>
+            <a>Event </a>
+          </div>
+          </Link>
+
+          <Link to="/service" className=' text-xs'>
+          <div>
+            <IoIosContact className=" ml-2 mt-2  text-xl"/>
+            <a>Services </a>
+          </div>
+          </Link>
+
+          <Link to="/profile" className=' text-xs'>
+          <div>
+            <FaUserAlt className=" ml-2 mt-2  text-xl"/>
+            <a>Profile </a>
+          </div>
+          </Link>
+      
+      
+        </div>
+      </div> 
+      </div> 
+
         
      
 

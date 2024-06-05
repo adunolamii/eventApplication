@@ -5,6 +5,7 @@ const admin2Model = require("./Models/admin2Model");
 const adminEventModel = require("./Models/adminEventModel");
 const adminUpcomingModel = require("./Models/adminUpcomingModel");
 const adminDiscoverModel = require("./Models/adminDiscoverModel");
+const adminEntertainmentModel = require("./Models/adminEntertainmentModel")
 const dotenv = require("dotenv").config();
 const cors = require('cors')
 
@@ -122,6 +123,25 @@ app.get("/adminDiscovers", async(req, res)=>{
   try {
      const adminDiscover = await adminDiscoverModel.find(req.body)
      res.status(200).json(adminDiscover)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+
+// CREATE ENTERTAINMENT  
+app.post("/adminEntertainments", async(req, res)=>{
+  try {
+     const adminEntertainment = await adminEntertainmentModel.create(req.body)
+     res.status(200).json(adminEntertainment)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ ENTERTAINMENT
+app.get("/adminEntertainments", async(req, res)=>{
+  try {
+     const adminEntertainment = await adminEntertainmentModel.find(req.body)
+     res.status(200).json(adminEntertainment)
   } catch (error) {
       res.status(500).json({error})
   }
