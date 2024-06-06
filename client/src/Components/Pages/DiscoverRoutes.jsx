@@ -5,6 +5,7 @@ import axios from 'axios';
 import { IoLocationSharp } from "react-icons/io5";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { IoMdTime } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function DiscoverRoutes() {
     const [form, setForm] = useState([]);
@@ -29,9 +30,10 @@ function DiscoverRoutes() {
 
   return (
     <div>
-
+<Link to="/">
     <IoMdArrowRoundBack />
-    
+</Link> 
+   
     <div>
     {
         discover.map((discover)=>(

@@ -155,16 +155,19 @@ function Navbar() {
         {formAll.map((formAll) => (
           <div key={formAll._id} className="w-32 h-36 ">
             <img src={formAll.picture} className="rounded-lg " />
+           
+           <Link to="/upcomingRoutes" >
             <h5 >{formAll.eventName}</h5>
             <div className=" flex justify-center">
             <IoLocationSharp className=" text-red-600 mt-1 " />
             <p className=" mb-2">{formAll.location}</p>
             </div >
-
+            </Link>
           </div>
           
         ))}
       </div> 
+
       <div>
       <div className="flex justify-between">
               <h6 className="font-bold text-xl">Discover Venues</h6>
@@ -178,11 +181,13 @@ function Navbar() {
         {admins.map((admins) => (
           <div key={admins._id} className="w-32 h-36 ">
             <img src={admins.picture} className="rounded-lg " />
+            <Link to="/discoverRoutes">
                   <p className="font-bold">{admins.eventName}</p> 
                   <div className="flex justify-center mr-3">
                   <IoLocationSharp className=" text-red-600 mt-1 " />
                   <p className=" mb-2">{admins.location}</p> 
                   </div>      
+                  </Link> 
           </div>
           
         ))}
