@@ -111,30 +111,21 @@ function Navbar() {
           />
         </div>
       </div>
-      <p className="text-xl font-bold mt-10 ml-4 mr-52 ">Happening Now!!!</p>
-
       <div>
-        {/* {/* {form.map((form) => (
-          <div key={form._id}>  */}
+      <p className="text-xl font-bold mt-10 ml-4 mr-52 ">Happening Now!!!</p>
+{/* <div>
+  {
+    form.map((form)=>(
+      <div key={form._id}>
+        <img src={form.picture} alt="" />
+        
+      </div>
+    ))
+  }
+</div> */}
+   </div>  
 
-            {/* <img
-              src={form.picture}
-              alt=""
-              className=" w-full h-40 rounded-2xl "
-            /> */}
-            
-
-
-             <div className="flex justify-between">
-              <div className=" flex justify-between">
-                
-              </div> 
-              <h1>{form.amount}</h1>
-            </div> 
-            {/* <div className="flex justify-between">
-              <p>{form.location}</p>
-              <h1>{form.time}</h1>
-            </div> */}
+           
             <div className="flex justify-between">
               <h6 className="font-bold text-xl">Upcoming Events</h6>
               <div>
@@ -144,14 +135,14 @@ function Navbar() {
               </div>
             </div>
           </div>
-         {/* ))} */}
-      {/* </div>  */}
+     
+     
            
 
 
 
 
-       <div className="flex flex-wrap gap-4 overflow-x-scroll">
+       <div className="flex flex-wrap gap-4 ">
         {formAll.map((formAll) => (
           <div key={formAll._id} className="w-32 h-36 ">
             <img src={formAll.picture} className="rounded-lg " />
@@ -169,7 +160,7 @@ function Navbar() {
       </div> 
 
       <div>
-      <div className="flex justify-between">
+      <div className="flex justify-between py-6">
               <h6 className="font-bold text-xl">Discover Venues</h6>
               <div>
                 <button className="flex justify-between">
@@ -177,10 +168,11 @@ function Navbar() {
                 </button>
               </div>
             </div>
-        <div className="flex flex-wrap gap-4 overflow-x-scroll">
+
+        <div className="flex flex-wrap gap-4 ">
         {admins.map((admins) => (
           <div key={admins._id} className="w-32 h-36 ">
-            <img src={admins.picture} className="rounded-lg " />
+            <img src={admins.picture} className="rounded-lg" />
             <Link to="/discoverRoutes">
                   <p className="font-bold">{admins.eventName}</p> 
                   <div className="flex justify-center mr-3">
@@ -194,7 +186,7 @@ function Navbar() {
       </div>
       </div>
      
-      </div>
+      
      
     </>
   );

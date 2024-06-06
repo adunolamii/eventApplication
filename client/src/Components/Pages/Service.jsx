@@ -26,7 +26,7 @@ const Service = () => {
 
 
 
-      <div className=' w-full h-48 bg-white mt flex flex-col-4 justify-around py-2'>
+      <div className=' w-full h-48 bg-white  flex flex-col-4 justify-around py-2'>
            <div><img src={image2} alt="" />Security Personel</div>
            <div> <img src={image3} alt="" />Catering Service</div>
       </div>

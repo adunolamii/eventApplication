@@ -42,8 +42,10 @@ function Entertainment() {
             {
               entertainment.map((entertainment) =>(
                 <div key={entertainment._id}>
-                    <img className=" mt-16" src={entertainment.picture} alt="" />
-                    {/* <p>{entertainment.djname}</p> */}
+                    {/* <div className="  flex-row gap w-36"> */}
+                    <img className=" mt-16 flex flex-col w-36" src={entertainment.picture} alt="" />
+                   <p className=" mr-72">{entertainment.djname}</p>
+                    {/* </div> */}
                 </div>
               ) )
 
