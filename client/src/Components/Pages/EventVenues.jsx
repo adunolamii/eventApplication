@@ -1,4 +1,4 @@
-// import React from 'react'
+import { IoLocationSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom'
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useState } from 'react';
@@ -27,14 +27,14 @@ function EventVenues() {
   return (
     <div>
              <div className="flex">
-<Link to="">
-        <IoMdArrowRoundBack className=" mt-1" />
+<Link to="/service" >
+        <IoMdArrowRoundBack className=" mt-1 cursor-pointer" />
  </Link> 
- <p className=" m-auto font-bold">Event Venues</p>
+ <p className=" mb-12 m-auto font-bold">Event Venues</p>
        
        <div className="absolute">
          <input
-           className="bg-gray-200 w-96 rounded-md h-10 text-2xl mt-10 mr-16"
+           className="bg-gray-200 w-96 rounded-md h-10 text-2xl mt-8 mr-16"
            type="text"
            placeholder="Search"
          />
@@ -44,7 +44,16 @@ function EventVenues() {
     {
         venues.map((venues)=>(
             <div key={venues._id}>
-                <img className=' py-6 w-full' src={venues.picture} alt="" />
+                <div className="  py-6">
+                    <img className=' w-full' src={venues.picture} alt="" />
+                    </div>
+            <div className=' flex'> 
+                 <div className=" flex justify-center mr-80 ml-0">
+                     <IoLocationSharp className=" text-red-600 mt-1 " />
+                    <p className=" font-bold mb-2">{venues.location}</p>
+                     </div >
+                <p className=" font-bold">{venues.price}</p>
+            </div>
             </div>
         ))
     }

@@ -28,13 +28,17 @@ const Service = () => {
 
       <div className=' w-full h-48 bg-white  flex flex-col-4 justify-around'>
           <Link to="/entertainment">
-           <div><img src={image6} alt="" />Entertainment</div></Link>
-           <div> <img src={image3} alt="" />Catering Service</div>
+           <div><img src={image6} alt="" />Entertainment</div>
+           </Link>
+
+           <Link to="/eventVenues">
+           <div> <img src={image1} alt="" />Event Venues</div>
+           </Link>
       </div>
 
       <div className=' w-full h-48 bg-white mt flex flex-col-4 justify-around'>
-           <div><img src={image1} alt="" />Event Venues</div>
-           <div> <img src={image5} alt="" />Videography</div>
+           <div><img src={image5} alt="" />Videography</div>
+           <div> <img src={image3} alt="" />Catering Service</div>
       </div>
       <div className=' w-full h-48 bg-white mt flex flex-col-4 justify-around'>
            <div><img src={image4} alt="" />Photography</div>
