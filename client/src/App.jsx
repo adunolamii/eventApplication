@@ -20,6 +20,8 @@ import AdminDiscover from './Admin/AdminDiscover';
 import DiscoverRoutes from './Components/Pages/DiscoverRoutes';
 import AdminEntertainment from './Admin/AdminEntertainment';
 import Entertainment from './Components/Entertainment';
+import EventVenues from './Components/Pages/EventVenues';
+import AdminEventVenues from './Admin/AdminEventVenues';
 
 
 function App() {
@@ -49,6 +51,9 @@ function App() {
 
                   <Route path="/adminentertainment" element={<AdminEntertainment/>}/>   
                   <Route path="/entertainment" element={<Entertainment/>}/>
+
+                  <Route path="/adminEventVenues" element={<AdminEventVenues/>}/>   
+                  <Route path="/eventVenues" element={<EventVenues/>}/>
 
 
 

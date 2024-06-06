@@ -2,6 +2,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Entertainment() {
     const [form, setForm] = useState([]);
@@ -25,8 +26,9 @@ function Entertainment() {
   return (
     <div>
         <div className="flex">
-
+<Link to="/service">
         <IoMdArrowRoundBack className=" mt-1" />
+ </Link>      
         <p className=" m-auto font-bold">Entertainment</p>
        
         <div className="absolute">
@@ -42,10 +44,10 @@ function Entertainment() {
             {
               entertainment.map((entertainment) =>(
                 <div key={entertainment._id}>
-                    {/* <div className="  flex-row gap w-36"> */}
+                    
                     <img className=" mt-16 flex flex-col w-36" src={entertainment.picture} alt="" />
                    <p className=" mr-72">{entertainment.djname}</p>
-                    {/* </div> */}
+                   
                 </div>
               ) )
 

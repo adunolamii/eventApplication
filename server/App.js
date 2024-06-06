@@ -6,6 +6,7 @@ const adminEventModel = require("./Models/adminEventModel");
 const adminUpcomingModel = require("./Models/adminUpcomingModel");
 const adminDiscoverModel = require("./Models/adminDiscoverModel");
 const adminEntertainmentModel = require("./Models/adminEntertainmentModel")
+const adminEventVModel = require("./Models/adminEventVModel")
 const dotenv = require("dotenv").config();
 const cors = require('cors')
 
@@ -142,6 +143,25 @@ app.get("/adminEntertainments", async(req, res)=>{
   try {
      const adminEntertainment = await adminEntertainmentModel.find(req.body)
      res.status(200).json(adminEntertainment)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+
+// CREATE adminEventV  
+app.post("/adminEventVs", async(req, res)=>{
+  try {
+     const adminEventV = await adminEventVModel.create(req.body)
+     res.status(200).json(adminEventVModel)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ adminEventV
+app.get("/adminEventVs", async(req, res)=>{
+  try {
+     const adminEventV = await adminEventVModel.find(req.body)
+     res.status(200).json(adminEventV)
   } catch (error) {
       res.status(500).json({error})
   }
