@@ -129,9 +129,11 @@ function Navbar() {
             <div className="flex justify-between">
               <h6 className="font-bold text-xl">Upcoming Events</h6>
               <div>
+                <Link to="/upcomingRoutes">
                 <button className="flex justify-between">
                   See all <CiSquarePlus className=" mt-1 w-6" />
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -163,9 +165,11 @@ function Navbar() {
       <div className="flex justify-between py-6">
               <h6 className="font-bold text-xl">Discover Venues</h6>
               <div>
+                <Link to="/eventVenues">
                 <button className="flex justify-between">
                   See all <CiSquarePlus className=" mt-1 w-6" />
                 </button>
+                </Link>
               </div>
             </div>
 
