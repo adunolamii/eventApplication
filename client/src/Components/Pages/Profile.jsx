@@ -1,5 +1,6 @@
 import React from 'react'
 import { RiLockPasswordLine } from "react-icons/ri";
+import { IoLocationSharp } from "react-icons/io5";
 import { FaGreaterThan } from "react-icons/fa6";
 import { GoHomeFill } from "react-icons/go";
 import { BsCalendar2EventFill } from "react-icons/bs";
@@ -18,15 +19,33 @@ function Profile() {
       <p className=' font-bold text-xl mr-60'>Acount Overview</p>
 
 <div className='flex flex-col'>
-      <div className=' bg-orange-200 w-10 h-10 rounded-xl absolute mt-10 cursor-pointer flex'>
-      <RiLockPasswordLine className=' m-auto mt-3 text-red-500' />         </div>
-      
-      <p className='relative mr-52 mt-12'>Change Password  </p> 
+      <div className=' bg-blue-200 w-10 h-10 rounded-xl absolute mt-10 cursor-pointer flex'>
+      <FaUserAlt className=' m-auto mt-3 text-blue-500' /> 
+      </div>
+      <p className='relative mr-64 mt-12'>My Profile  </p> 
+     </div>
      
-      
+     
+     <div className='flex flex-col'>
+      <div className=' bg-orange-200 w-10 h-10 rounded-xl absolute mt-10 cursor-pointer flex'>
+      <IoLocationSharp className=' m-auto mt-3 text-red-500' /> 
       </div>
-      
+      <p className='relative mr-72 mt-12'>Location  </p> 
+     </div>
+     
+     
+     <div className='flex flex-col'>
+      <div className=' bg-orange-200 w-10 h-10 rounded-xl absolute mt-10 cursor-pointer flex'>
+      <RiLockPasswordLine className=' m-auto mt-3 text-red-500' /> 
       </div>
+      <p className='relative mr-52 mt-12'>Change Password  </p> 
+     </div>
+     
+</div>
+
+
+
+
       <div className="w-full"> 
       <div className="bg-black fixed w-full bottom-0 right-0 ">
         <div className="text-2xl text-white flex flex-row justify-around cursor-pointer">

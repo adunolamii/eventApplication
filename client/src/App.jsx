@@ -22,7 +22,9 @@ import AdminEntertainment from './Admin/AdminEntertainment';
 import Entertainment from './Components/Entertainment';
 import EventVenues from './Components/Pages/EventVenues';
 import AdminEventVenues from './Admin/AdminEventVenues';
-
+import MyProfile from './Components/Pages/MyProfile';
+import Location from './Components/Location'
+import AdminLocation from './Admin/AdminLocation';
 
 function App() {
    return (
@@ -42,6 +44,7 @@ function App() {
                   <Route path="/event" element={<Event/>}/>
                   <Route path="/service" element={<Service/>}/>
                   <Route path="/profile" element={<Profile/>}/>
+                  
 
                   <Route path="/adminUpcoming" element={<AdminUpcoming/>}/>   
                   <Route path="/upcomingRoutes" element={<UpcomingRoutes/>}/>
@@ -54,9 +57,13 @@ function App() {
 
                   <Route path="/adminEventVenues" element={<AdminEventVenues/>}/>   
                   <Route path="/eventVenues" element={<EventVenues/>}/>
+                  <Route path="/myProfile" element={<MyProfile/>}/>
+                 
+                  <Route path="/location" element={<Location/>}/>
+                  <Route path="/adminLocation" element={<AdminLocation/>}/>
+                  
 
-
-
+       
                   <Route path="/signUp" element={<SignUp/>}/>
                   <Route path="/signIn" element={<SignIn/>}/>
             </Routes>
