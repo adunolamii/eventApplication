@@ -45,8 +45,8 @@ app.get("/events", async(req, res)=>{
 })
 // READ SINGLE
 app.get(`/event/:id`, async(req, res)=>{
+  const {id} = req.params
     try {
-        const {id} = req.params
         const event = await eventModel.findById(id)
         res.status(200).json(event)
     } catch (error) {

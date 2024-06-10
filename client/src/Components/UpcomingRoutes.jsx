@@ -42,17 +42,17 @@ function UpcomingRoutes() {
         <div key={upcoming._id}>
                 <img className=" w-full h-56 rounded-lg" src={upcoming.picture} alt="" />
                 
-                <div className=" flex justify-center mr-64 ml-2">
-                 <MdOutlineCalendarMonth className=" text-red-600 mt-1 ml-4" />
-                <p className=" mb-2">{upcoming.date}</p>
+                <div className=" flex flex-row mt-2">
+                 <MdOutlineCalendarMonth className=" text-red-600 mt-1" />
+                <p className=" ">{upcoming.date}</p>
                  </div >
 
-                 <div className=" flex justify-center mr-72">
+                 <div className=" flex flex-row">
                  <IoMdTime className=" text-red-600 mt-1 " />
-                <p className=" mb-2">{upcoming.time}</p>
+                <p className="">{upcoming.time}</p>
                  </div >
 
-                 <div className=" flex justify-center mr-80 ml-2">
+                 <div className="  flex flex-row">
                  <IoLocationSharp className=" text-red-600 mt-1 " />
                 <p className=" mb-2">{upcoming.location}</p>
                  </div >
@@ -61,7 +61,7 @@ function UpcomingRoutes() {
 
                  <p className="">{upcoming.description}</p>
 
-                 <button className=" mt-6 bg-blue-700 w-full rounded-md text-white font-bold">Buy Tickect</button>
+                 <button className=" mb-8 py-1 mt-4 bg-blue-700 w-full rounded-md text-white font-bold">Buy Tickect</button>
                  
                 
         </div>

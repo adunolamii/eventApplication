@@ -29,8 +29,8 @@ function Location() {
     <div>
         <div className="flex">
         <Link to="/profile">
-        <IoMdArrowRoundBack className=" mt-1" />
-        </Link>      
+        <IoMdArrowRoundBack className=" cursor-pointer mt-1" />
+ </Link> 
              <div className="h-15 items-center  flex flex-row px-8 ">
              <IoLocationSharp className=" text-red-600 " />
              <p className="text-xl font-bold"> No 6, Trench Avenue Pluto.</p>
@@ -50,7 +50,7 @@ function Location() {
               location.map((location) =>(
                 <div key={location._id}>
                     
-                    <img className=" mt-16 flex flex-col w-36" src={location.picture} alt="" />
+                    <img className=" mt-16 flex flex-col w-full" src={location.picture} alt="" />
                 </div>
               ) )
 

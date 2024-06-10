@@ -25,6 +25,7 @@ import AdminEventVenues from './Admin/AdminEventVenues';
 import MyProfile from './Components/Pages/MyProfile';
 import Location from './Components/Location'
 import AdminLocation from './Admin/AdminLocation';
+import ChangePassword from './Components/ChangePassword';
 
 function App() {
    return (
@@ -58,6 +59,7 @@ function App() {
                   <Route path="/adminEventVenues" element={<AdminEventVenues/>}/>   
                   <Route path="/eventVenues" element={<EventVenues/>}/>
                   <Route path="/myProfile" element={<MyProfile/>}/>
+                  <Route path="/changePassword" element={<ChangePassword/>}/>
                  
                   <Route path="/location" element={<Location/>}/>
                   <Route path="/adminLocation" element={<AdminLocation/>}/>

@@ -48,7 +48,44 @@ function Event() {
           />
         </div>
       </div>
-      <div  className=' mt-12'>
+
+
+
+      <div className="hidden bg-black fixed w-full top-0 right-0  tablet:block ">
+          
+         
+          <div >
+         
+           <div className="text-2xl text-white flex space-x-16 p-3 pl-[-28px] justify-between cursor-pointer">
+             
+           <Link to="/"> <p>EVENT APP</p></Link>
+                        
+ 
+             <Link to="/event" className=" text-xs">
+               <div>
+                 <BsCalendar2EventFill className=" ml-2 mt-2  text-xl" />
+                 <a>Event </a>
+               </div>
+             </Link>
+ 
+             <Link to="/service" className=" text-xs">
+               <div>
+                 <IoIosContact className=" ml-2 mt-2  text-xl" />
+                 <a>Services </a>
+               </div>
+             </Link>
+ 
+             <Link to="/profile" className=" text-xs">
+               <div>
+                 <FaUserAlt className=" ml-2 mt-2  text-xl" />
+                 <a>Profile </a>
+               </div>
+             </Link>
+           </div>
+           </div>
+         </div>
+ 
+       <div  className=' mt-12'>
       {
        event.map((event) => (
         <div key={event._id} className=" h-36 w-44">
@@ -81,7 +118,7 @@ function Event() {
       </div>
       
       <div className="w-full"> 
-      <div className="bg-black fixed w-full bottom-0 right-0 ">
+      <div className=" bg-black fixed w-full bottom-0 right-0  tablet:hidden">
         <div className="text-2xl text-white flex flex-row justify-around cursor-pointer">
        
         <Link to="/" className=' text-xs'>
