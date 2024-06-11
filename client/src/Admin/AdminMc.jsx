@@ -2,11 +2,12 @@ import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
 
-function AdminLocation() {
+function AdminMc() {
 
     const [formData, setFormData] = useState({
             
         picture: "",
+        name: "",
        
     })
     const handleChange = (e) => {
@@ -20,25 +21,35 @@ function AdminLocation() {
          
              setFormData({
         picture:"",
+        name: "",
         
         });
            
             try {
-                await axios.post("http://localhost:5001/adminLocations", formData)
+                await axios.post("http://localhost:5001/adminMcs", formData)
             } catch (error) {
                 console.log("error message")
             }
         }
   return (
-    <div>AdminLocation
+    <div>AdminMc
 
-      <form className="flex flex-col gap-7 mt-6" onSubmit={handleSubmit}>
+<form className="flex flex-col gap-7 mt-6" onSubmit={handleSubmit}>
        <input
             name="picture"
             value={formData.picture}
             className="pl-10  border-4 border-blue-200 w-full rounded-md p-2 text-xl font-bold"
             type="text"
             placeholder="picture"
+            onChange={handleChange}
+          />
+
+            <input
+            name="name"
+            value={formData.name}
+            className="pl-10  border-4 border-blue-200 w-full rounded-md p-2 text-xl font-bold"
+            type="text"
+            placeholder="name"
             onChange={handleChange}
           />
           
@@ -50,4 +61,4 @@ function AdminLocation() {
   )
 }
 
-export default AdminLocation
+export default AdminMc

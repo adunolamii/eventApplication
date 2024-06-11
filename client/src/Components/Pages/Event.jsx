@@ -88,28 +88,26 @@ function Event() {
        <div  className=' mt-12'>
       {
        event.map((event) => (
-        <div key={event._id} className=" h-36 w-44">
-          <div className=" w-96  bg-black">
-          <img src={event.picture} className="rounded-lg w-full h-48" />
+        <div key={event._id} className="  w-44">
+          <div className=" w-96 ">
+          <img src={event.picture} className="  rounded-lg w-full h-52" />
           </div>
           <div className='flex justify-between'>
             <p className='font-bold'>{event.eventName}</p>
             <p className='ml-72 font-bold'>{event.amount}</p>
           </div>
          
-          <div className='flex'>
+          <div className='flex flex-col'>
           <div className=" mr-10 flex ">
             <IoLocationSharp className=" text-red-600 mt-1  font-bold" />
             <p className=" mb-2 font-bold mr-2">{event.location}</p>
             </div >
             
-            <p className=' ml-20 font-bold  px-3'>{event.date}</p>
+            <p className=' font-bold'>{event.date}</p>
           </div>
 
-          
-          {/* <div className='flex justify-between'>
-            <p className='font-bold'>{event.eventName}</p>
-            <p className=' ml-10 font-bold'>{event.time}</p>
+          {/* <div className="  w-full  ml-52 pb-2 flex justify-end">
+          <p className=" font-bold">{event.time}</p>
           </div> */}
           
         </div> 

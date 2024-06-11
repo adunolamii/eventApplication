@@ -8,6 +8,8 @@ const adminDiscoverModel = require("./Models/adminDiscoverModel");
 const adminEntertainmentModel = require("./Models/adminEntertainmentModel")
 const adminEventVModel = require("./Models/adminEventVModel")
 const adminLocationModel = require("./Models/adminLocationModel")
+const adminDjModel = require("./Models/adminDjModel")
+const adminMcModel = require("./Models/adminMcModel")
 const dotenv = require("dotenv").config();
 const cors = require('cors')
 
@@ -183,6 +185,44 @@ app.get("/adminLocations", async(req, res)=>{
   try {
      const adminLocation = await adminLocationModel.find(req.body)
      res.status(200).json(adminLocation)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+
+// CREATE adminDJ
+app.post("/adminDjs", async(req, res)=>{
+  try {
+    const adminDj = await adminDjModel.create(req.body)
+     res.status(200).json(adminDj)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ adminDJ
+app.get("/adminDjs", async(req, res)=>{
+  try {
+     const adminDj = await adminDjModel.find(req.body)
+     res.status(200).json(adminDj)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+
+// CREATE adminMC
+app.post("/adminMcs", async(req, res)=>{
+  try {
+    const adminMc = await adminMcModel.create(req.body)
+     res.status(200).json(adminMc)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ adminMc
+app.get("/adminMcs", async(req, res)=>{
+  try {
+     const adminMc = await adminMcModel.find(req.body)
+     res.status(200).json(adminMc)
   } catch (error) {
       res.status(500).json({error})
   }

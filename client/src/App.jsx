@@ -26,6 +26,10 @@ import MyProfile from './Components/Pages/MyProfile';
 import Location from './Components/Location'
 import AdminLocation from './Admin/AdminLocation';
 import ChangePassword from './Components/ChangePassword';
+import AdminDj from './Admin/AdminDj';
+import Dj from './Components/Dj';
+import Mc from './Components/Mc';
+import AdminMc from './Admin/AdminMc';
 
 function App() {
    return (
@@ -63,6 +67,12 @@ function App() {
                  
                   <Route path="/location" element={<Location/>}/>
                   <Route path="/adminLocation" element={<AdminLocation/>}/>
+
+                  <Route path="/dj" element={<Dj/>}/>
+                  <Route path="/adminDj" element={<AdminDj/>}/>
+
+                  <Route path="/mc" element={<Mc/>}/>
+                  <Route path="/adminMc" element={<AdminMc/>}/>
                   
 
        

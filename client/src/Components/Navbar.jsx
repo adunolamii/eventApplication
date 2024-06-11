@@ -138,16 +138,18 @@ function Navbar() {
         </div>
 
 
+       
 
 
 
-<div className="flex justify-between py-6"><p className="text-xl font-bold py-2">Happening Now!!!</p></div>
+
+<div className=" tablet:block flex justify-between py-6"><p className="text-xl font-bold py-2">Happening Now!!!</p></div>
         
  
         <div>
           {form.map((form) => (
             <div key={form._id}>
-              <img className=" w-full h-36 rounded-lg" src={form.picture} alt="" />
+              <img className="  w-full h-36 rounded-lg" src={form.picture} alt="" />
             </div>
           ))}
         </div>

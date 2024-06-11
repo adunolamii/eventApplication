@@ -40,6 +40,18 @@ function Entertainment() {
         </div>
 
     </div>
+
+
+    <div className=" pt-20 pb-0 justify-between flex font-bold">
+  <button>All</button>
+  <button>DJs </button>
+  <button>Comedian</button>
+  <button>Dancer</button>
+  <button>Music Band</button>
+  <button>Sound Engineers</button>
+</div>
+
+
     <div >
             {
               entertainment.map((entertainment) =>(
