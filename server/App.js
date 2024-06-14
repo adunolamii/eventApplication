@@ -10,6 +10,9 @@ const adminEventVModel = require("./Models/adminEventVModel")
 const adminLocationModel = require("./Models/adminLocationModel")
 const adminDjModel = require("./Models/adminDjModel")
 const adminMcModel = require("./Models/adminMcModel")
+const adminComedianModel = require("./Models/adminComedianModel")
+const adminDancerModel = require("./Models/adminDancerModel")
+const adminMusicModel = require("./Models/adminMusicModel")
 const dotenv = require("dotenv").config();
 const cors = require('cors')
 
@@ -227,6 +230,84 @@ app.get("/adminMcs", async(req, res)=>{
       res.status(500).json({error})
   }
 })
+
+// CREATE adminComedian
+app.post("/adminComedians", async(req, res)=>{
+  try {
+    const adminComedian = await adminComedianModel.create(req.body)
+     res.status(200).json(adminComedian)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ adminCOMEDIAN
+app.get("/adminComedians", async(req, res)=>{
+  try {
+     const adminComedian = await adminComedianModel.find(req.body)
+     res.status(200).json(adminComedian)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+
+// CREATE adminComedian
+app.post("/adminComedians", async(req, res)=>{
+  try {
+    const adminComedian = await adminComedianModel.create(req.body)
+     res.status(200).json(adminComedian)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ // CREATE adminComedian
+app.post("/adminComedians", async(req, res)=>{
+  try {
+    const adminComedian = await adminComedianModel.create(req.body)
+     res.status(200).json(adminComedian)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+
+// CREATE adminDANCER
+app.post("/adminDancers", async(req, res)=>{
+  try {
+    const adminDancer = await adminDancerModel.create(req.body)
+     res.status(200).json(adminDancer)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ adminDANCER
+app.get("/adminDancers", async(req, res)=>{
+  try {
+     const adminDancer = await adminDancerModel.find(req.body)
+     res.status(200).json(adminDancer)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+
+// CREATE adminMUSIC
+app.post("/adminMusics", async(req, res)=>{
+  try {
+    const adminMusic = await adminMusicModel.create(req.body)
+     res.status(200).json(adminMusic)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ adminMUSIC
+app.get("/adminMusics", async(req, res)=>{
+  try {
+     const adminMusic = await adminMusicModel.find(req.body)
+     res.status(200).json(adminMusic)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+
+
 
 
 // MONGODB CONNECTION

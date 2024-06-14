@@ -5,26 +5,26 @@ import axios from "axios";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
-function Dj() {
-  const [dj, setDj] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [location, setLocation] = useState([]);
+const Music = () => {
+
+    const [form, setForm] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [music, setMusic] = useState([]);
 
 
     useEffect(() => {
   
-        const djAll = async () => {
+        const musicAll = async () => {
           try {
-            const res = await axios.get("http://localhost:5001/adminDjs");
-            setDj(res.data);
+            const res = await axios.get("http://localhost:5001/adminMusics");
+            setMusic(res.data);
           } catch (error) {
             setError(error);
             setLoading(false);
           }
         };
-        djAll ();
+        musicAll ();
       }, [])
-  
   return (
     <div>
 
@@ -41,19 +41,22 @@ function Dj() {
             placeholder="Search"
           />
         </div>
-        </div>
-        <div>
+
+    </div>
+
+<div>
           {
-            dj.map((dj)=>(
-              <div key={dj._id}>
-                  <img  className=" pt-16 flex flex-col"  src={dj.picture} alt="" />
-                  <p  className=' pt-2 justify-start flex font-bold'>{dj.name}</p>
+          music.map((music)=>(
+              <div key={music._id}>
+                  <img className=" mt-16 flex flex-col w-36"  src={music.picture} alt="" />
+                  <p className=' justify-start flex font-bold'>{music.name}</p>
               </div>
             ))
           }
         </div>
+
     </div>
   )
 }
 
-export default Dj
+export default Music

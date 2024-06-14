@@ -43,12 +43,15 @@ function Entertainment() {
 
 
     <div className=" pt-20 pb-0 justify-between flex font-bold">
+  
   <button>All</button>
-  <button>DJs </button>
-  <button>Comedian</button>
-  <button>Dancer</button>
-  <button>Music Band</button>
-  <button>Sound Engineers</button>
+  
+  <Link to="/dj"><button>DJs </button></Link>
+  <Link to="/comedian"> <button>Comedian</button></Link>
+  <Link to="/dancer"><button>Dancer</button></Link>
+  <Link to="/music"> <button>Music Band</button></Link>
+  <Link to="/sound"><button>Sound Engineers</button></Link>
+
 </div>
 
 

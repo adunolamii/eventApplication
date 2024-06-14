@@ -30,6 +30,14 @@ import AdminDj from './Admin/AdminDj';
 import Dj from './Components/Dj';
 import Mc from './Components/Mc';
 import AdminMc from './Admin/AdminMc';
+import Comedian from './Components/Comedian';
+import AdminComedian from './Admin/AdminComedian';
+import Dancer from './Components/Dancer';
+import AdminDancer from './Admin/AdminDancer';
+import Music from './Components/Music';
+import AdminMusic from './Admin/AdminMusic';
+import  Sound  from './Components/Sound';
+import  AdminSound  from './Admin/adminSound';
 
 function App() {
    return (
@@ -73,7 +81,19 @@ function App() {
 
                   <Route path="/mc" element={<Mc/>}/>
                   <Route path="/adminMc" element={<AdminMc/>}/>
+
+                  <Route path="/comedian" element={<Comedian/>}/>
+                  <Route path="/admincomedian" element={<AdminComedian/>}/>
                   
+
+                  <Route path="/dancer" element={<Dancer/>}/>
+                  <Route path="/admindancer" element={<AdminDancer/>}/>
+
+                  <Route path="/music" element={<Music/>}/>
+                  <Route path="/adminmusic" element={<AdminMusic/>}/>
+
+                  <Route path="/sound" element={<Sound/>}/>
+                  <Route path="/adminsound" element={<AdminSound/>}/>
 
        
                   <Route path="/signUp" element={<SignUp/>}/>

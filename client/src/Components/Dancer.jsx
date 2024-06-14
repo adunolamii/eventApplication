@@ -5,30 +5,28 @@ import axios from "axios";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
-function Dj() {
-  const [dj, setDj] = useState([]);
+function Dancer() {
+    const [form, setForm] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [location, setLocation] = useState([]);
+    const [dancer, setDancer] = useState([]);
 
 
     useEffect(() => {
   
-        const djAll = async () => {
+        const dancerAll = async () => {
           try {
-            const res = await axios.get("http://localhost:5001/adminDjs");
-            setDj(res.data);
+            const res = await axios.get("http://localhost:5001/adminDancers");
+            setDancer(res.data);
           } catch (error) {
             setError(error);
             setLoading(false);
           }
         };
-        djAll ();
+        dancerAll ();
       }, [])
-  
   return (
     <div>
-
-<div className="flex">
+         <div className="flex">
 <Link to="/entertainment">
         <IoMdArrowRoundBack className=" mt-1" />
  </Link>      
@@ -41,19 +39,22 @@ function Dj() {
             placeholder="Search"
           />
         </div>
-        </div>
-        <div>
+
+    </div>
+
+<div>
           {
-            dj.map((dj)=>(
-              <div key={dj._id}>
-                  <img  className=" pt-16 flex flex-col"  src={dj.picture} alt="" />
-                  <p  className=' pt-2 justify-start flex font-bold'>{dj.name}</p>
+            dancer.map((dancer)=>(
+              <div key={dancer._id}>
+                  <img className=" mt-16 flex flex-col w-36"  src={dancer.picture} alt="" />
+                  <p className=' justify-start flex font-bold'>{dancer.name}</p>
               </div>
             ))
           }
         </div>
+
     </div>
   )
 }
 
-export default Dj
+export default Dancer
