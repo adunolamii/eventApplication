@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
 
-function AdminMc() {
+const AdminSound = () => {
 
     const [formData, setFormData] = useState({
             
@@ -26,15 +26,14 @@ function AdminMc() {
         });
            
             try {
-                await axios.post("http://localhost:5001/adminMcs", formData)
+                await axios.post("http://localhost:5001/adminEngineers", formData)
             } catch (error) {
                 console.log("error message")
             }
         }
   return (
-    <div>AdminMc
-
-      <form className="flex flex-col gap-7 mt-6" onSubmit={handleSubmit}>
+    <div>AdminSound
+        <form className="flex flex-col gap-7 mt-6" onSubmit={handleSubmit}>
        <input
             name="picture"
             value={formData.picture}
@@ -61,4 +60,4 @@ function AdminMc() {
   )
 }
 
-export default AdminMc
+export default AdminSound

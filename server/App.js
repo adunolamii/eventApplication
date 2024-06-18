@@ -13,6 +13,9 @@ const adminMcModel = require("./Models/adminMcModel")
 const adminComedianModel = require("./Models/adminComedianModel")
 const adminDancerModel = require("./Models/adminDancerModel")
 const adminMusicModel = require("./Models/adminMusicModel")
+const adminEngineerModel = require("./Models/adminEngineerModel")
+const adminVideoModel = require("./Models/adminVideoModel")
+// const adminSoundModel = require("./Models/adminSoundModel")
 const dotenv = require("dotenv").config();
 const cors = require('cors')
 
@@ -307,7 +310,43 @@ app.get("/adminMusics", async(req, res)=>{
   }
 })
 
+// CREATE adminENGINEER
+app.post("/adminEngineers", async(req, res)=>{
+  try {
+    const adminEngineer = await adminEngineerModel.create(req.body)
+     res.status(200).json(adminEngineer)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ adminENGINEER
+app.get("/adminEngineers", async(req, res)=>{
+  try {
+     const adminEngineer = await adminEngineerModel.find(req.body)
+     res.status(200).json(adminEngineer)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
 
+// CREATE adminVIDEO
+app.post("/adminVideos", async(req, res)=>{
+  try {
+    const adminVideo = await adminVideo.create(req.body)
+     res.status(200).json(adminVideo)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
+// READ adminVIDEO
+app.get("/adminVideos", async(req, res)=>{
+  try {
+     const adminVideo= await adminVideoModel.find(req.body)
+     res.status(200).json(adminVideo)
+  } catch (error) {
+      res.status(500).json({error})
+  }
+})
 
 
 // MONGODB CONNECTION

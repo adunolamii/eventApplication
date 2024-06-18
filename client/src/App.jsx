@@ -36,8 +36,14 @@ import Dancer from './Components/Dancer';
 import AdminDancer from './Admin/AdminDancer';
 import Music from './Components/Music';
 import AdminMusic from './Admin/AdminMusic';
-import  Sound  from './Components/Sound';
-import  AdminSound  from './Admin/adminSound';
+// import { Sound } from './Components/Components2/Sound';
+import Engineer from './Components/Components2/Engineer';
+import AdminSound from './Admin2/AdminSound';
+import { Video } from './Components/Components2/Video';
+import AdminVideo from './Admin2/AdminVideo';
+
+
+
 
 function App() {
    return (
@@ -92,8 +98,17 @@ function App() {
                   <Route path="/music" element={<Music/>}/>
                   <Route path="/adminmusic" element={<AdminMusic/>}/>
 
-                  <Route path="/sound" element={<Sound/>}/>
+                  {/* <Route path="/sound" element={<Sound/>}/> */}
+                  <Route path="/engineer" element={<Engineer/>}/>
                   <Route path="/adminsound" element={<AdminSound/>}/>
+
+
+                  <Route path="/video" element={<Video/>}/>
+                  <Route path="/adminvideo" element={<AdminVideo/>}/>
+                 
+
+              
+                 
 
        
                   <Route path="/signUp" element={<SignUp/>}/>
